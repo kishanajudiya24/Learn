@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Animation</title>
+    <style>
+
+        body{
+            background-color: black;
+        }
+.lm{
+    border: 1px solid white;
+}
+
+
+
+.outer{
+    height: 400px;
+    width: 400px;
+    border: 4px double purple ;
+    margin: 10%;
+    background-color: grey;
+    /* border-radius: 0px 280px 356px 558px; */
+    position: relative;
+    transform: rotate(45deg);
+    animation-name: outer;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+}
+@keyframes outer{
+
+0% {
+    top: 50%;
+    left: 0;
+}
+50% {
+    top: 50%;
+    left: 50%;
+}
+100% {
+    top: 50%;
+    left: 0;
+
+}
+
+
+}
+
+.inner{
+height: 50px;
+width: 50px;
+border: 1px double royalblue ;
+border-radius: 50%;
+background-color: chartreuse;
+position: absolute;
+animation-name: inner;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+
+}
+
+@keyframes inner{
+0%{
+top: 0;
+left: 0;
+opacity: 100%;
+}
+20% {
+top: 350px;
+    left: 350px;
+opacity: 70%;
+
+}
+40%{
+top: 350px;
+left: 0px;
+opacity: 20%;
+
+}
+60%{
+    top: 0px;
+    left: 350px;
+opacity: 50%;
+
+}
+
+100% {
+    top: 0;
+    left: 0;
+opacity: 100%;
+
+}
+}
+.inner:hover{
+background-color: blue;
+
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="lm">
+    <div class="outer">
+        <div class="inner"></div>
+
+    </div>
+</div>
+</body>
+</html>
